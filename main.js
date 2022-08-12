@@ -74,7 +74,7 @@ class LetsPlayTheGame {
           this.result.classList.remove('msg', 'msg-win');
 
         } else {
-          return alert('Silahkan Pilih Tangan Untuk Bermain Lalu Menangkan!!');
+          return alert('Silahkan Pilih Tangan Pada Player Untuk Bermain Lalu Menangkan!!');
         }
       }
 }
