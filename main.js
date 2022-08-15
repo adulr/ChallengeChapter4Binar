@@ -6,8 +6,6 @@ class LetsPlayTheGame {
         this.playerElement = null;
         this.comp = null;
         this.compElement = null;
-        this.winner = null;
-        this.score = 0;
         this.alreadySelected = false;
         this.result = document.querySelector('.result');
     }
@@ -20,9 +18,6 @@ class LetsPlayTheGame {
             this.player = this.playerElement.id;
             this.#randomCompHand();
             this.#rules();
-            this.winner = this.#rules();
-            this.winner === 'PLAYER' ? this.score += 1 : this.score += 0;
-            console.log({ score: this.score });
         } else {
             alert('anda sudah memilih, klik refresh untuk main lagi');
         }
@@ -67,7 +62,6 @@ class LetsPlayTheGame {
           this.compElement.classList.remove('border');
           this.player = null;
           this.comp = null;
-          this.winner = null;
           this.alreadySelected = false;
           this.result.innerHTML = 'VS';
           this.result.classList.remove('msg', 'msg-draw');
